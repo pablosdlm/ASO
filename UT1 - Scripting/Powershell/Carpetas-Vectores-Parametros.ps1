@@ -1,0 +1,55 @@
+<#
+.SYNOPSIS
+    Crear carpetas con vectores en Powershell
+.DESCRIPTION
+    Creación de carpetas “ASIR1, ASIR2, DAW1, DAW2, DAM1,DAM2, SMR1, SMR2, SMRd1, SMRd2”, a partir de un vector de nombres. Creación de 20 subcarpetas de usuarios por cada carpeta cread
+.PARAMETER [Nombre parámetro]
+    Sin parámetros
+.EXAMPLE
+    .\Carpetas-Vectores.ps1
+.NOTES
+    Autor: Pablo Sainz de la Maza
+    Fecha: 13/10/2025
+    Version: 1.0
+#>
+function crearCarpetas {
+    param (
+        OptionalParameters
+    )
+    
+}
+
+param(
+    # Carpeta Raíz (Por defecto: Documentos del usuario actual)
+    [string]$carpetaRaiz = [Environment]::GetFolderPath("MyDocuments"),
+
+    # Grupos de clases
+    [string[]]$carpetas=@("ASIR1", "ASIR2", "DAW1", "DAW2", "DAM1", "DAM2", "SMR1", "SMR2", "SMRd1", "SMRd2"),
+
+    #Número de alumnos por grupo
+    [int]$numAlumnos = 20 
+
+    # Usamos 2 dígitos para los usuarios: 01..20
+    [int]$digitos = 2
+)
+
+
+Clear-Host
+$usuarios = "C:\users\$env:USERNAME" # Ruta del escritorio del usuario actual
+# Bucle para recorrer el array de nombres de carpetas
+foreach ($carpeta in $carpetas){
+    # Comprobación y creación de carpetas principales
+    if (-not(test-path "$usuarios\Desktop\usuarios\$carpeta")) {
+    New-Item -ItemType Directory -Path "$usuarios\Desktop\usuarios\$carpeta"
+    Write-Host "Carpeta $carpeta creada"
+        # Bucle para crear las 20 subcarpetas de usuarios
+        for ($i=1; $i -le 20; $i++){
+            $usuarioNum = "{0:D2}" -f $i # Formateo del número de usuario con dos dígitos
+            # Creación de subcarpetas
+                New-Item -ItemType Directory -Path "$usuarios\Desktop\usuarios\$carpeta\usuario$usuarioNum"
+            }
+        }
+    else {
+        Write-Host "La carpeta $carpeta ya existe"
+    }
+}
