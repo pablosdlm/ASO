@@ -23,17 +23,11 @@ foreach ($carpeta in $carpetas){
     Write-Host "Carpeta $carpeta creada"
         # Bucle para crear las 20 subcarpetas de usuarios
         for ($i=1; $i -le 20; $i++){
-            $usuarioNum = "{0:D2}" -f $i
-            # Comprobación y creación de subcarpetas
-            if (-not(test-path "$usuarios\Desktop\usuarios\$carpeta\usuario$usuarioNum")) {
+            $usuarioNum = "{0:D2}" -f $i # Formateo del número de usuario con dos dígitos
+            # Creación de subcarpetas
                 New-Item -ItemType Directory -Path "$usuarios\Desktop\usuarios\$carpeta\usuario$usuarioNum"
-                Write-Host "Subcarpeta usuario$usuarioNum creada"
-            }
-            else {
-                Write-Host "La subcarpeta usuario$i ya existe"
             }
         }
-    }
     else {
         Write-Host "La carpeta $carpeta ya existe"
     }
