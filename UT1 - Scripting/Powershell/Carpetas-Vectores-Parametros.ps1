@@ -9,25 +9,19 @@
     .\Carpetas-Vectores.ps1
 .NOTES
     Autor: Pablo Sainz de la Maza
-    Fecha: 13/10/2025
+    Fecha: 15/10/2025
     Version: 1.0
 #>
-function crearCarpetas {
-    param (
-        OptionalParameters
-    )
-    
-}
 
 param(
     # Carpeta Raíz (Por defecto: Documentos del usuario actual)
     [string]$carpetaRaiz = [Environment]::GetFolderPath("MyDocuments"),
 
-    # Grupos de clases
+    #Grupos de clases
     [string[]]$carpetas=@("ASIR1", "ASIR2", "DAW1", "DAW2", "DAM1", "DAM2", "SMR1", "SMR2", "SMRd1", "SMRd2"),
 
-    #Número de alumnos por grupo
-    [int]$numAlumnos = 20 
+    # Número de alumnos por grupo
+    [int]$numAlumnos = 20,
 
     # Usamos 2 dígitos para los usuarios: 01..20
     [int]$digitos = 2

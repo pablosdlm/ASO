@@ -9,7 +9,7 @@
     .\Carpetas-Vectores.ps1
 .NOTES
     Autor: Pablo Sainz de la Maza
-    Fecha: 13/10/2025
+    Fecha: 15/10/2025
     Version: 1.0
 #>
 Clear-Host
