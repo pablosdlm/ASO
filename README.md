@@ -4,4 +4,4 @@
   - Powershell
   - Bash
 * UT2 - Active Directory
-  - Capturas
+
