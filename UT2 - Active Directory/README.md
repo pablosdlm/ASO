@@ -10,7 +10,8 @@ En esta unidad, hemos realizado tareas sobre **Active Directory** en **Windows S
 - Replicar un controlador de dominio en otro
 - Compartición de carpetas en red
 - Creación de usuarios y grupos en el dominio
-  
+- Directorio con los archivos del trabajo grupal.
+
 ## Actividades realizadas:
 - [Actividad 1](ASO_UT2_Actividad1_SainzdelaMazaPablo.pdf)
 - [Actividad 2](ASO_UT2_Actividad2_SainzdelaMazaPablo.pdf)

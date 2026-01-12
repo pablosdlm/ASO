@@ -1,0 +1,3 @@
+﻿Name,Scope,Category,OU
+GGGrupo3_Admins,Global,Security,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local"
+GGGrupo3_Empleados,Global,Security,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local"

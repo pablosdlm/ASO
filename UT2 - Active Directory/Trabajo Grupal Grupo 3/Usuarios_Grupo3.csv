@@ -1,0 +1,7 @@
+SamAccountName,FirstName,LastName,UserPrincipalName,OU,Groups
+USRGrupo3_SamuelS,Samuel,Saez,USRGrupo3_SamuelS@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Admins"
+USRGrupo3_PabloS,Pablo,Sainz,USRGrupo3_PabloS@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Admins"
+USRGrupo3_LuciaM,Lucia,Martinez,USRGrupo3_LuciaM@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Empleados"
+USRGrupo3_DanielR,Daniel,Rodriguez,USRGrupo3_DanielR@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Empleados"
+USRGrupo3_AliciaG,Alicia,Garcia,USRGrupo3_AliciaG@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Empleados"
+USRGrupo3_Marcos,Marco,Sierra,USRGrupo3_MarcoL@DC01-grupo3.local,"OU=OUGrupo3_Usuarios,DC=DC01-grupo3,DC=local","GGGrupo3_Empleados"
