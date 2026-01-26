@@ -1,16 +1,27 @@
 # UT4 - Administración remota con WAC (Windows Admin Center) y Cockpit
 
-## Documentación de WAC
-### 1. Acceso a WAC (Windows Admin Center)
+## Documentación de WAC (Windows Admin Center)
+WAC o Windows Admin Center es el programa desarrollado por Microsoft para poder usar herramientas de monitorización vía interfaz web remotamente.
+### 1. Acceso a WAC 
+Para usar correctamente WAC, hay que instalarlo dentro de Windows 11 para usarlo como puente hacia el servidor en Windows Server. En la configuración rápida, nos dará un puerto (generalmente el puerto 6600) para poder acceder por la interfaz web. Una vez accedamos a la interfaz principal de WAC, tenemos que tener a mano un usuario que tenga permisos de acceso remoto o el usuario administrador, ya que necesitaremos sus credenciales para conectarnos.
+
 ![Acceso a WAC](capturas/wac-acceso.png)
 ### 2. Administración remota del servidor
+Cuando nos hayamos connectado al servidor, se muestra en la página principal la información de los componentes del servidor.
+
 ![Información del servidor](capturas/wac-servidor.png)
+
+Aquí vemos qué uso de CPU y RAM hay en el servidor.
+
 ![Rendimiento de la CPU y Memoria del servidor](capturas/wac-rendimiento.png)
+
+Entre diversas herramientas, podemos encontrar los servicios que se encuentran en el servidor y así poder revisar el estado de los servicios en caso de fallo o de requerir un reinicio.
+
 ![Servicios del servidor](capturas/wac-servicios.png)
 
 | Sistema administrado | Herramienta | Protocolo | Puerto |
 |:----------------------:|:-------------:|:-----------:|:--------:|
-| Windows Server 2025 |  WAC | RDP | 6600
+| Windows Server 2025 |  WAC | HTTPS, WinRM, SMB, Kerberos | 6600 (HTTPS) 5985/5986 (WinRM) 445 (SMB) 88 (Kerberos) 
 
 ## Documentación de Cockpit
 ### 1. Estado del servicio de Cockpit y el socket
@@ -32,6 +43,7 @@ Una vez hayamos comprobado que el servicio está activo y hemos creado el usuari
 
 ### 4. Rendimiento del servidor
 Para revisar el uso de CPU y de memoria RAM, hay que dirigirse al apartado **Visión global**, donde podremos ver dichos usos e información del sistema.
+
 ![Rendimiento del servidor](capturas/cockpit-rendimiento.png)
 
 | Sistema | Usuario remoto | Herramienta | Protocolo | Puerto |
