@@ -1,13 +1,13 @@
 # UT4 - Administración remota con WAC (Windows Admin Center) y Cockpit
 
 ## Documentación de WAC (Windows Admin Center)
-WAC o Windows Admin Center es el programa desarrollado por Microsoft para poder usar herramientas de monitorización vía interfaz web remotamente.
+WAC o Windows Admin Center es el programa desarrollado por Microsoft para poder usar herramientas de monitorización como revisar los servicios y procesos que se están ejecutando en el momento, o el uso de CPU y memoria vía interfaz web de forma remota.
 ### 1. Acceso a WAC 
 Para usar correctamente WAC, hay que instalarlo dentro de Windows 11 para usarlo como puente hacia el servidor en Windows Server. En la configuración rápida, nos dará un puerto (generalmente el puerto 6600) para poder acceder por la interfaz web. Una vez accedamos a la interfaz principal de WAC, tenemos que tener a mano un usuario que tenga permisos de acceso remoto o el usuario administrador, ya que necesitaremos sus credenciales para conectarnos.
 
 ![Acceso a WAC](capturas/wac-acceso.png)
 ### 2. Administración remota del servidor
-Cuando nos hayamos connectado al servidor, se muestra en la página principal la información de los componentes del servidor.
+Cuando nos hayamos conectado al servidor, se muestra en la página principal la información básica de los componentes del servidor y la información general del servidor.
 
 ![Información del servidor](capturas/wac-servidor.png)
 
